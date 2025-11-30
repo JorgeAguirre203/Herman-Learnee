@@ -17,7 +17,7 @@ import { Router, RouterModule } from "@angular/router";
 
     <div class="top-buttons">
       <button class="btn black">Registrarse</button>
-      <button class="btn black"(click)="goT oLogin()">Iniciar sesión</button>
+      <button class="btn black"(click)="goToLogin()">Iniciar sesión</button>
     </div>
   </header>
 
@@ -87,7 +87,12 @@ export class Index {
     }
 
     goToLogin() {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/Login']);
     }
+
+      goToRegistrarse() {
+        this.router.navigate(['/registrarse']);
+    }
+
     
 }

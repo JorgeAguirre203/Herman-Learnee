@@ -1,0 +1,92 @@
+/* Barra superior */
+.header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  width: 800px;
+  padding: 12px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  margin-left: 300px;
+}
+
+/* Título */
+.title {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* Tarjeta de login */
+.login-card {
+  width: 650px;
+  margin: 40px auto;
+  padding: 40px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* Botones */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  width: 60%;
+  padding: 10px;
+  display: block;
+  margin: 15px auto 0;
+  background: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Caja inferior */
+.register-box {
+  width: 300px;
+  margin: 50px auto;
+  padding: 15px;
+  background: #eaeaea;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.register-link {
+  color: #7b2fff;
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}

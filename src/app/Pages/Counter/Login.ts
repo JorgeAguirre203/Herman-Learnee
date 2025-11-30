@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
+import { Registrarse } from "./registrarse";
 @Component({
     standalone: true,
     template: `
@@ -28,4 +30,12 @@ import { Component } from "@angular/core";
 `,
     styleUrls: ['./login.css']
 })
-export class Login {}
+export class Login {
+
+  constructor(private router: Router) {}
+
+  goToRegistrarse() {
+    this.router.navigate(['/registrarse']);
+  }
+}
+
