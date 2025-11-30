@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { Registrarse } from "./registrarse";
+
 @Component({
     standalone: true,
     template: `
@@ -19,7 +20,7 @@ import { Registrarse } from "./registrarse";
   <input type="password" class="input">
 
   <button class="btn-primary">Iniciar sesión</button>
-  <button class="btn-secondary">Volver</button>
+     <button class="btn-secondary"(click)="navigate()">volver</button>
 </div>
 
 <div class="register-box">
@@ -37,5 +38,10 @@ export class Login {
   goToRegistrarse() {
     this.router.navigate(['/registrarse']);
   }
+  navigate() {
+    this.router.navigate(['/']); // te lleva al index principal
+  }
+
+  
 }
 

@@ -1,0 +1,42 @@
+<div class="top-bar">
+  <div class="logo">Learne</div>
+
+  <div class="search-container">
+    <input type="text" placeholder="Buscar cursos" class="search-input">
+    <span class="close-btn">×</span>
+  </div>
+
+     <button class="volver-btn"(click)="navigate()">volver</button>
+
+  <!-- BOTÓN que abre la barra lateral -->
+  <div class="user-mini-pic" (click)="toggleSidebar()"></div>
+</div>
+
+<!-- OVERLAY para cerrar -->
+<div class="overlay" *ngIf="sidebarOpen" (click)="toggleSidebar()"></div>
+
+<div class="content">
+
+  <!-- SIDEBAR con animación -->
+  <div class="sidebar" [class.open]="sidebarOpen">
+    <ul>
+      <li><strong>Perfil de usuario</strong></li>
+      <li>Cursos en proceso</li>
+      <li>Personalización de perfil</li>
+      <li class="sub">Historial de cursos</li>
+      <li>Configuración</li>
+      <li>Mis cursos</li>
+    </ul>
+  </div>
+
+  <!-- Perfil principal -->
+  <div class="profile-center">
+    <div class="profile-pic"></div>
+
+    <h1 class="name">✨✨Nombre aquí✨✨</h1>
+
+    <div class="description">
+      Agregar descripción
+    </div>
+  </div>
+</div>

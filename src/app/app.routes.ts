@@ -3,7 +3,7 @@ import { CounterPageComponent } from './Pages/Counter-Page.Component';
 import { Index } from './Pages/Counter/Index';
 import { Login } from './Pages/Counter/Login';
 import { Registrarse } from "./Pages/Counter/registrarse";
-
+import { ProfileComponent } from './Pages/Counter/profile';
 export const routes: Routes = [
   {
     path: '',
@@ -17,4 +17,9 @@ export const routes: Routes = [
     path: 'registrarse',
     component: Registrarse,
   },
+  {
+  path: "perfil",
+  component: ProfileComponent,
+},
+
 ];

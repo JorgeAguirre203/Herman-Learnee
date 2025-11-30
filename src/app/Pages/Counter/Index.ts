@@ -16,7 +16,7 @@ import { Router, RouterModule } from "@angular/router";
     <input type="text" placeholder="Buscar cursos" class="search-input">
 
     <div class="top-buttons">
-      <button class="btn black">Registrarse</button>
+      <button class="btn black"(click)="goToRegistrarse()">Registrarse</button>
       <button class="btn black"(click)="goToLogin()">Iniciar sesión</button>
     </div>
   </header>

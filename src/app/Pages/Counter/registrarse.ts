@@ -14,4 +14,8 @@ export class Registrarse {
   goToLogin() {
     this.router.navigate(['/Login']);
   }
+   navigate() {
+    this.router.navigate(['/']); // te lleva al index principal
+  }
+
 }
