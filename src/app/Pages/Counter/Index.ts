@@ -6,8 +6,8 @@ import { Router, RouterModule } from "@angular/router";
   imports: [RouterModule],
 
   template: `
-<div class="container">
-<link rel="stylesheet" href="index.css">
+  <div class="container">
+  <link rel="stylesheet" href="index.css">
 
   <!-- Barra superior -->
   <header class="top-bar">
@@ -19,6 +19,7 @@ import { Router, RouterModule } from "@angular/router";
       <button class="btn" (click)="toggleDarkMode()">
         {{ isDarkMode ? 'Modo claro' : 'Modo oscuro' }}
       </button>
+      <button class="btn black" (click)="goTomenu()">Cursos</button>
       <button class="btn black" (click)="goToRegistrarse()">Registrarse</button>
       <button class="btn black" (click)="goToLogin()">Iniciar sesión</button>
     </div>
@@ -98,4 +99,8 @@ export class Index {
     this.isDarkMode = !this.isDarkMode;
     document.body.classList.toggle('dark-mode', this.isDarkMode);
   }
+   goTomenu() {
+    this.router.navigate(['/menu-cursos']);
+  }
+
 }

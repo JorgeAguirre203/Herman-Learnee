@@ -4,6 +4,7 @@ import { Index } from './Pages/Counter/Index';
 import { Login } from './Pages/Counter/Login';
 import { Registrarse } from "./Pages/Counter/registrarse";
 import { ProfileComponent } from './Pages/Counter/profile';
+import { CoursesComponent } from './Pages/Counter/menu-cursos';
 export const routes: Routes = [
   {
     path: '',
@@ -17,9 +18,14 @@ export const routes: Routes = [
     path: 'registrarse',
     component: Registrarse,
   },
+   {
+    path: 'menu-cursos',
+    component: CoursesComponent,
+  },
   {
   path: "perfil",
   component: ProfileComponent,
+  
 },
 
 ];

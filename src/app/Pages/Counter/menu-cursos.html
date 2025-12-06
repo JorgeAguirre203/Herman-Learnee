@@ -1,0 +1,88 @@
+<div class="top-bar">
+
+  <div class="logo">
+    <img src="assets/logo.png" alt="logo">
+    <span>Learne</span>
+  </div>
+
+  <div class="search-wrapper">
+    <input type="text" placeholder="Python">
+    <button class="clear-btn">✕</button>
+  </div>
+
+  <img src="assets/avatar.jpg" class="avatar" alt="user">
+</div>
+
+
+<div class="layout">
+
+  <!-- Sidebar filtros -->
+  <aside class="sidebar">
+    <h3>Filtros</h3>
+
+    <label>precio <span>$0–100</span></label>
+    <input type="range" min="0" max="100">
+
+    <h4>Nivel</h4>
+    <div class="checkboxes">
+      <label><input type="checkbox" checked> Alto</label>
+      <label><input type="checkbox" checked> Medio</label>
+      <label><input type="checkbox" checked> Bajo</label>
+    </div>
+
+    <select class="select">
+      <option>Idiomas</option>
+    </select>
+
+    <select class="select">
+      <option>Rating</option>
+    </select>
+  </aside>
+
+
+  <!-- Contenido principal -->
+  <main class="content">
+
+    <!-- Botones de orden -->
+    <div class="sort-buttons">
+      <button 
+        [class.active]="selectedFilter === 'recent'"
+        (click)="setFilter('recent')">
+        Recientemente añadidos
+      </button>
+
+      <button 
+        [class.active]="selectedFilter === 'high-price'"
+        (click)="setFilter('high-price')">
+        Precio mayor a menor
+      </button>
+
+      <button 
+        [class.active]="selectedFilter === 'low-price'"
+        (click)="setFilter('low-price')">
+        Precio menor a mayor
+      </button>
+
+      <button 
+        [class.active]="selectedFilter === 'popular'"
+        (click)="setFilter('popular')">
+        Popular
+      </button>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards-grid">
+
+      <div class="card" *ngFor="let c of [1,2,3,4,5,6]">
+        <div class="card-image"></div>
+
+        <div class="card-info">
+          <p class="title">Text</p>
+          <p class="price">$0</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+</div>
