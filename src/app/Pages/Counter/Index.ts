@@ -2,12 +2,12 @@ import { Component } from "@angular/core";
 import { Router, RouterModule } from "@angular/router";
 
 @Component({
-    standalone: true,
-    imports: [RouterModule],
-    template: `
-   <link rel="stylesheet" href="index.css">
+  standalone: true,
+  imports: [RouterModule],
 
+  template: `
 <div class="container">
+<link rel="stylesheet" href="index.css">
 
   <!-- Barra superior -->
   <header class="top-bar">
@@ -16,8 +16,11 @@ import { Router, RouterModule } from "@angular/router";
     <input type="text" placeholder="Buscar cursos" class="search-input">
 
     <div class="top-buttons">
-      <button class="btn black"(click)="goToRegistrarse()">Registrarse</button>
-      <button class="btn black"(click)="goToLogin()">Iniciar sesión</button>
+      <button class="btn" (click)="toggleDarkMode()">
+        {{ isDarkMode ? 'Modo claro' : 'Modo oscuro' }}
+      </button>
+      <button class="btn black" (click)="goToRegistrarse()">Registrarse</button>
+      <button class="btn black" (click)="goToLogin()">Iniciar sesión</button>
     </div>
   </header>
 
@@ -76,23 +79,23 @@ import { Router, RouterModule } from "@angular/router";
   </section>
 
 </div>
-
-    `
+  `
 })
 export class Index {
-    constructor(private router: Router) {}
+  constructor(private router: Router) {}
 
-    navigate() {
-        this.router.navigate(['/counter-page.Component']);
-    }
+  goToLogin() {
+    this.router.navigate(['/Login']);
+  }
 
-    goToLogin() {
-        this.router.navigate(['/Login']);
-    }
+  goToRegistrarse() {
+    this.router.navigate(['/registrarse']);
+  }
 
-      goToRegistrarse() {
-        this.router.navigate(['/registrarse']);
-    }
+  isDarkMode = false;
 
-    
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    document.body.classList.toggle('dark-mode', this.isDarkMode);
+  }
 }
