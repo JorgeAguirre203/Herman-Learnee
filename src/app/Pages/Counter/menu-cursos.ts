@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   selector: 'app-courses',
-  templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css']
+  templateUrl: './menu-cursos.html',
+  styleUrls: ['./menu-cursos.css']
 })
 export class CoursesComponent {
 
@@ -22,6 +22,18 @@ export class CoursesComponent {
   goTomenu() {
     this.router.navigate(['/menu-cursos']);
   }
+  goToLogin() {
+    this.router.navigate(['/Login']);
+  }
+
+  goToRegistrarse() {
+    this.router.navigate(['/registrarse']);
+  }
+
+
+
+  
+  }
   
 
-}
+

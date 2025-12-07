@@ -4,16 +4,15 @@ import { Router, RouterModule } from "@angular/router";
 @Component({
   standalone: true,
   imports: [RouterModule],
-
+  styleUrls: ['./index.css'],
   template: `
   <div class="container">
-  <link rel="stylesheet" href="index.css">
 
   <!-- Barra superior -->
   <header class="top-bar">
     <div class="logo-placeholder">Learne</div>
 
-    <input type="text" placeholder="Buscar cursos" class="search-input">
+    <input type="text" placeholder="Buscar cursos" class="search-input" aria-label="Buscar cursos">
 
     <div class="top-buttons">
       <button class="btn" (click)="toggleDarkMode()">
@@ -31,8 +30,11 @@ import { Router, RouterModule } from "@angular/router";
     <!-- Izquierda: Banner -->
     <div class="main-banner">
       <div class="tag">¡Completamente Gratis!</div>
-      Minijuegos de programación<br>
-      Desde 0
+      <div class="banner-content">
+        <div class="banner-title">Minijuegos de programación<br>Desde 0</div>
+        <div class="banner-sub">Empieza hoy y aprende jugando</div>
+        <button class="cta-button" (click)="goTomenu()" aria-label="Comenzar ahora">Comenzar ahora</button>
+      </div>
     </div>
 
     <!-- Derecha: Aprende / Enseña -->
@@ -99,8 +101,8 @@ export class Index {
     this.isDarkMode = !this.isDarkMode;
     document.body.classList.toggle('dark-mode', this.isDarkMode);
   }
-   goTomenu() {
+
+  goTomenu() {
     this.router.navigate(['/menu-cursos']);
   }
-
 }
