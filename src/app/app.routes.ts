@@ -5,6 +5,7 @@ import { Login } from './Pages/Counter/Login';
 import { Registrarse } from "./Pages/Counter/registrarse";
 import { ProfileComponent } from './Pages/Counter/profile';
 import { CoursesComponent } from './Pages/Counter/menu-cursos';
+import { CourseDetailsComponent } from './Pages/Counter/course-details';
 export const routes: Routes = [
   {
     path: '',
@@ -25,7 +26,11 @@ export const routes: Routes = [
   {
   path: "perfil",
   component: ProfileComponent,
-  
-},
+    },
+    {
+        path:"curso",
+        component: CourseDetailsComponent,
+    },
+
 
 ];

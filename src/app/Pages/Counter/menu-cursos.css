@@ -159,3 +159,11 @@
 .price {
   font-weight: bold;
 }
+
+.btn-black{
+ background: black;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;}

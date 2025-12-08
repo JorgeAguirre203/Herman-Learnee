@@ -10,6 +10,7 @@
     <button class="clear-btn">✕</button>
   </div>
 
+  <button class="btn-black" (click)="navigate()">Volver</button>
   <img src="assets/avatar.jpg" class="avatar" alt="user">
 </div>
 
@@ -73,7 +74,12 @@
     <!-- Cards -->
     <div class="cards-grid">
 
-      <div class="card" *ngFor="let c of [1,2,3,4,5,6]">
+      <div 
+        class="card"
+        *ngFor="let c of cursos"
+        (click)="openCard(c)"
+        style="cursor: pointer;"
+      >
         <div class="card-image"></div>
 
         <div class="card-info">
