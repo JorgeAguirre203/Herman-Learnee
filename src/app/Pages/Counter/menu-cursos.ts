@@ -8,12 +8,24 @@ import { Router } from '@angular/router';
   selector: 'app-courses',
   templateUrl: './menu-cursos.html',
   styleUrls: ['./menu-cursos.css']
+  
 })
+
 export class CoursesComponent {
 
-  selectedFilter = 'recent';
+   selectedFilter = 'recent';
 
-  cursos = [1,2,3,4,5,6]; // ejemplo, puedes cambiarlo
+  // ⭐ Arreglo SIN backend: cada curso tiene su imagen
+  cursos = [
+    { id: 1, titulo: "Curso de Python", precio: 0, imagen: "/imagenes/python.jpeg" },
+    { id: 2, titulo: "JavaScript Básico", precio: 0, imagen: "/imagenes/images.jpeg" },
+    { id: 3, titulo: "HTML & CSS", precio: 0, imagen: "assets/imagenes/html.jpeg" },
+    { id: 4, titulo: "SQL para Principiantes", precio: 0, imagen: "assets/imagenes/sql.jpeg" },
+    { id: 5, titulo: "C++ Desde Cero", precio: 0, imagen: "assets/imagenes/cpp.jpeg" },
+    { id: 6, titulo: "Redes y TCP/IP", precio: 0, imagen: "assets/imagenes/redes.jpeg" }
+  ];
+
+
 
   constructor(private router: Router) {}
 

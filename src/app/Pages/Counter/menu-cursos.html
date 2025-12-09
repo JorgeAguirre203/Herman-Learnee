@@ -12,12 +12,13 @@
 
   <button class="btn-black" (click)="navigate()">Volver</button>
   <img src="assets/avatar.jpg" class="avatar" alt="user">
+
 </div>
 
 
 <div class="layout">
 
-  <!-- Sidebar filtros -->
+  <!-- Sidebar -->
   <aside class="sidebar">
     <h3>Filtros</h3>
 
@@ -39,6 +40,8 @@
       <option>Rating</option>
     </select>
   </aside>
+
+
 
 
   <!-- Contenido principal -->
@@ -71,24 +74,31 @@
       </button>
     </div>
 
+
+
+
     <!-- Cards -->
     <div class="cards-grid">
 
       <div 
         class="card"
         *ngFor="let c of cursos"
-        (click)="openCard(c)"
+        (click)="openCard(c.id)"
         style="cursor: pointer;"
       >
-        <div class="card-image"></div>
+
+        <!-- Imagen dinámica -->
+        <img class="card-image" [src]="c.imagen" alt="curso">
 
         <div class="card-info">
-          <p class="title">Text</p>
-          <p class="price">$0</p>
+          <p class="title">{{ c.titulo }}</p>
+          <p class="price">${{ c.precio }}</p>
         </div>
+
       </div>
 
     </div>
 
   </main>
+
 </div>

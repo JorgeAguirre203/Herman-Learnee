@@ -1,4 +1,4 @@
-<!-- Top Bar -->
+<!-- Header -->
 <header class="top-bar">
   <div class="logo">
     <img src="assets/logo.png" alt="Logo">
@@ -9,51 +9,59 @@
     <input type="text" class="search-input" placeholder="Buscar cursos">
     <button class="close-btn">✖</button>
   </div>
-  <button class="btn-black"(click)="navigate()">Volver</button>
+
+  <button class="btn-black" (click)="navigate()">Volver</button>
+
   <div class="profile">
     <img src="assets/profile.jpg" class="profile-img">
   </div>
 </header>
 
-<!-- Main Content -->
-<section class="course-container">
-
-  <!-- Left Text Block -->
-  <div class="info-block">
-    <h1 class="course-title">Python - Para Principiantes )</h1>
-    <p class="subtitle">Aprende Instrucciones y algoritmos en python</p>
-    <p class="creator">Creado por:</p>
-  </div>
-
- <div class="image-block">
-  <iframe 
-    class="course-video"
-    width="100%" 
-    height="315"
-   src="https://www.youtube.com/embed/nKPbfIU442g"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+<!-- Mostrar error si no existe el curso -->
+<div *ngIf="!cursoSeleccionado" class="error-box">
+  <h2>❌ Curso no encontrado</h2>
+  <p>El curso que intentas ver no existe.</p>
+  <button class="btn-black" (click)="navigate()">Volver</button>
 </div>
 
+<!-- Contenido si el curso existe -->
+<div *ngIf="cursoSeleccionado">
 
-</section>
+  <!-- Main Section -->
+  <section class="course-container">
 
-<!-- What you will learn -->
-<section class="learn-section">
-  <h2>Lo que aprenderás</h2>
+    <!-- Info -->
+    <div class="info-block">
+      <h1 class="course-title">{{ cursoSeleccionado.titulo }}</h1>
+      <p class="subtitle">{{ cursoSeleccionado.descripcion }}</p>
+      <p class="creator">Creado por: Equipo Learne</p>
+    </div>
 
-  <ul>
-    <li>Aprenderán a programar con Python desde cero hasta experto!</li>
-    <li>Desde los temas más básicos, intermedios y avanzados!</li>
-    <li>Programación Orientada a Objetos con Python</li>
-    <li>Conexión a Bases de Datos con Python, Postgresql y MySql</li>
-    <li>Creación de Aplicaciones de Escritorio GUI con Tkinter</li>
-    <li>Creación de Aplicaciones de Escritorio GUI con PySide (Qt)</li>
-    <li>Creación de aplicaciones Web con Django y Python</li>
-    <li>Creación de aplicaciones Web con Flask y Python</li>
-    <li>Todo dentro de un mismo curso, Universidad Python</li>
-  </ul>
-</section>
+    <!-- Video -->
+    <div class="image-block">
+      <iframe 
+        class="course-video"
+        width="100%" 
+        height="315"
+        [src]="cursoSeleccionado.video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </section>
+
+  <!-- Learn Section -->
+  <section class="learn-section">
+    <h2>Lo que aprenderás</h2>
+
+    <ul>
+      <li>Aprenderás desde nivel básico hasta avanzado.</li>
+      <li>Ejemplos prácticos y explicaciones detalladas.</li>
+      <li>Proyectos reales para practicar.</li>
+      <li>Clases en video paso a paso.</li>
+    </ul>
+  </section>
+
+</div>
