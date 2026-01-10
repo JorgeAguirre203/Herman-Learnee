@@ -1,4 +1,7 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+
+import { Registrarse } from "./registrarse";
 
 @Component({
     standalone: true,
@@ -17,7 +20,7 @@ import { Component } from "@angular/core";
   <input type="password" class="input">
 
   <button class="btn-primary">Iniciar sesión</button>
-  <button class="btn-secondary">Volver</button>
+     <button class="btn-secondary"(click)="navigate()">volver</button>
 </div>
 
 <div class="register-box">
@@ -28,4 +31,17 @@ import { Component } from "@angular/core";
 `,
     styleUrls: ['./login.css']
 })
-export class Login {}
+export class Login {
+
+  constructor(private router: Router) {}
+
+  goToRegistrarse() {
+    this.router.navigate(['/registrarse']);
+  }
+  navigate() {
+    this.router.navigate(['/']); // te lleva al index principal
+  }
+
+  
+}
+

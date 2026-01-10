@@ -1,0 +1,169 @@
+/* --- TOP BAR --- */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-buttons .btn {
+  padding: 10px 18px; border-radius: 999px; margin-left: 10px; cursor: pointer; font-weight: 600; border: none;
+  background: white; box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.top-buttons .btn:hover { transform: translateY(-2px); }
+
+.btn.black { background: #111; color: #fff; border: none; }
+.btn.black:hover { background: #000; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 40%;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+
+/* --- LAYOUT PRINCIPAL --- */
+.layout {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+
+/* --- SIDEBAR --- */
+.sidebar {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+  border: 1px solid #ddd;
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar h4 {
+  margin-top: 20px;
+}
+
+.checkboxes label {
+  display: block;
+  margin: 5px 0;
+}
+
+.select {
+  margin-top: 15px;
+  width: 100%;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+/* --- SORT BUTTONS --- */
+.sort-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sort-buttons button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  cursor: pointer;
+}
+
+.sort-buttons .active {
+  background: #000;
+  color: #fff;
+}
+
+
+/* --- CARDS --- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-image {
+  width: 200%;
+  height: 150px;
+  background: #e5e5e5;
+}
+
+.card-info {
+  padding: 10px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.btn-black{
+ background: black;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;}
